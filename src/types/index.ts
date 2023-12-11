@@ -1,4 +1,5 @@
 import * as React from "react";
+import {LucideIcon} from "lucide-react";
 
 export type IContextType = {
     user: IUser;
@@ -11,7 +12,7 @@ export type IContextType = {
 
 
 export type INavLink = {
-    imgURL: string;
+    imgURL: LucideIcon;
     route: string;
     label: string;
 };

@@ -15,11 +15,10 @@ import { Input } from "@/components/ui/input"
 
 import {Button} from "@/components/ui/button.tsx";
 import {useForm} from "react-hook-form";
-import {SigninValidation, SignupValidation} from "@/lib/validation";
+import {SignupValidation} from "@/lib/validation";
 import { z } from "zod";
 import {Loader2} from "lucide-react";
 import {Link, useNavigate} from "react-router-dom";
-import {createUserAccount} from "@/lib/appwrite/api.ts";
 import {useCreateUserAccount, useSignInAccount} from "@/lib/react-query/queriesAndMutations.ts";
 import {useUserContext} from "@/context/AuthContext.tsx";
 
