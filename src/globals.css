@@ -262,16 +262,16 @@
   }
 
   .shad-input-g {
-    @apply h-12 bg-dark-4 border-none placeholder:text-green-300 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-green-200 !important;
+    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-green-200 !important;
   }
 
   .shad-textarea {
-    @apply h-36 bg-dark-3 rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+    @apply h-36 bg-dark-3 rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-green-200 !important;
   }
 
   /* Button */
   .shad-button_primary {
-    @apply bg-primary-500 hover:bg-primary-500 text-light-1 flex gap-2 !important;
+    @apply bg-emerald-600 hover:bg-emerald-500 text-light-1 flex gap-2 !important;
   }
 
   .shad-button_dark_4 {
