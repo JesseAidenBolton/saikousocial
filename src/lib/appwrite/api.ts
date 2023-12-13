@@ -309,3 +309,32 @@ export async function deleteSavedPost(savedRecordId: string) {
         console.log(error)
     }
 }
+
+export async function getPostById(postId: string) {
+    try{
+        const post = await databases.getDocument(
+            appwriteConfig.databaseId,
+            appwriteConfig.postCollectionId,
+            postId
+        )
+        return post;
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+export async function deletePost(postId: string, imageId: string) {
+    if(!postId || !imageId) throw Error;
+
+    try{
+        await databases.deleteDocument(
+            appwriteConfig.databaseId,
+            appwriteConfig.postCollectionId,
+            postId
+        )
+        return { status: 'ok'};
+    } catch(error) {
+        console.log(error)
+    }
+
+}
