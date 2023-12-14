@@ -5,7 +5,7 @@ import {
 import {
     createPost,
     createUserAccount, deletePost, deleteSavedPost, getCurrentUser, getInfinitePosts, getPostById,
-    getRecentPosts, likePost, savePost, searchPosts,
+    getRecentPosts, getUsers, likePost, savePost, searchPosts,
     signInAccount,
     signOutAccount,
     updatePost
@@ -158,14 +158,15 @@ export const useGetPosts = () => {
         queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],
         queryFn: getInfinitePosts,
         getNextPageParam: (lastPage) => {
-            if(lastPage && lastPage.documents.length === 0) return null;
+            if (!lastPage || lastPage.documents.length === 0) return null;
 
-            const lastId = lastPage.documents[lastPage?.documents.length - 1].$id;
+            const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
 
             return lastId;
         }
-    })
-}
+    });
+};
+
 
 export const useSearchPosts = (searchTerm: string) => {
     return useQuery({
@@ -174,3 +175,10 @@ export const useSearchPosts = (searchTerm: string) => {
         enabled: !!searchTerm
     })
 }
+
+export const useGetUsers = (limit?: number) => {
+    return useQuery({
+        queryKey: [QUERY_KEYS.GET_USERS],
+        queryFn: () => getUsers(limit),
+    });
+};
