@@ -1,4 +1,4 @@
-import {ID, Query} from 'appwrite';
+import {ID, Models, Query} from 'appwrite';
 
 import {INewPost, INewUser, IUpdatePost, IUpdateUser} from "@/types";
 import {account, appwriteConfig, avatars, databases, storage} from "@/lib/appwrite/config.ts";
@@ -353,10 +353,10 @@ export async function deletePost(postId?: string, imageId?: string) {
 }
 
 
-export async function getInfinitePosts({ pageParam } : {pageParam: number }) {
-    const queries: any[] = [Query.orderDesc('$updatedAt'), Query.limit(10)]
+export async function getInfinitePosts({ pageParam }: { pageParam: number }): Promise<Models.DocumentList<Models.Document> | undefined> {
+    const queries: any[] = [Query.orderDesc('$updatedAt'), Query.limit(10)];
 
-    if(pageParam) {
+    if (pageParam) {
         queries.push(Query.cursorAfter(pageParam.toString()));
     }
 
@@ -365,17 +365,15 @@ export async function getInfinitePosts({ pageParam } : {pageParam: number }) {
             appwriteConfig.databaseId,
             appwriteConfig.postCollectionId,
             queries
-        )
+        );
 
-        if(!posts) throw Error;
+        if (!posts) throw Error;
 
         return posts;
     } catch (error) {
         console.log(error);
     }
-
 }
-
 export async function searchPosts(searchTerm: string) {
 
     try {

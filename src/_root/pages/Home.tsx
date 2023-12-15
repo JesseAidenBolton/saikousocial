@@ -6,9 +6,9 @@ import UserCard from "@/components/shared/UserCard.tsx";
 
 const Home = () => {
 
-    const {data: posts, isPending: isPostLoading, isError: isErrorPosts} = useGetRecentPosts()
+    const {data: posts, isPending: isPostLoading} = useGetRecentPosts()
 
-    const { data: creators, isPending: isUserLoading, isError: isErrorCreators} = useGetUsers(10);
+    const { data: creators, isPending: isUserLoading} = useGetUsers(10);
 
 
     return (
