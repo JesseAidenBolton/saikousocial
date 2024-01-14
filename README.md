@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Social Media Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to a user-friendly social media platform, designed with aesthetics and functionality at its core. Supported by a robust authentication system and efficient data fetching. Experience a seamless user journey powered by the latest web technologies.
 
-Currently, two official plugins are available:
+## ⚙️ Tech Stack
+- **React.js:** For building a dynamic and interactive UI.
+- **Appwrite:** Backend as a Service (BaaS) solution providing a range of backend capabilities.
+- **React Query:** Enhancing data fetching processes for optimal performance.
+- **TypeScript:** Ensuring type safety and improving code quality.
+- **Shadcn:** Utilized for advanced UI components.
+- **Tailwind CSS:** For crafting a responsive and modern user interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+- **🔒 Robust Authentication System:** Prioritizing security and user privacy in every interaction.
+- **🔍 Explore Page:** A beautifully designed homepage to explore posts, featuring top creators.
+- **❤️ Like and Save Functionality:** Empowering users to like and save posts, with easy management of preferences.
+- **📝 Detailed Post Page:** Dive deep into content with related posts for an enriched experience.
+- **👤 Profile Page:** A personalized space showcasing liked posts and profile editing options.
+- **🌐 Browse Other Users:** Explore the vibrant community by browsing other users' profiles and posts.
+- **✍️ Create Post Page:** A seamless interface for creating posts with drag-and-drop file management.
+- **🔄 Edit Post Functionality:** Flexibility to edit posts, ensuring content remains up-to-date.
+- **📱 Responsive UI with Bottom Bar:** A mobile-friendly design with intuitive navigation.
+- **⚡ React Query Integration:** Leveraging advanced features like auto caching, parallel queries, and mutations for a superior experience.
+- **☁️ Appwrite BaaS:** Streamlining backend development with authentication, database, file storage, and more.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### And much more, including sophisticated code architecture and reusability, to provide an unparalleled social media experience!
 
-- Configure the top-level `parserOptions` property like this:
+## Live Deployment
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Check out the live version: [Try the App Here](https://saikousocial.vercel.app/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Screenshots
+![Screenshot of the application](./assets/images/saikousaocial_screenshot.jpg)
+
+
+---
+
