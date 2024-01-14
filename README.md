@@ -24,8 +24,6 @@ Welcome to a user-friendly social media platform, designed with aesthetics and f
 - **⚡ React Query Integration:** Leveraging advanced features like auto caching, parallel queries, and mutations for a superior experience.
 - **☁️ Appwrite BaaS:** Streamlining backend development with authentication, database, file storage, and more.
 
-### And much more, including sophisticated code architecture and reusability, to provide an unparalleled social media experience!
-
 ## Live Deployment
 
 Check out the live version: [Try the App Here](https://saikousocial.vercel.app/)
