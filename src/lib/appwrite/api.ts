@@ -480,7 +480,7 @@ export async function updateUser(user: IUpdateUser) {
                 name: user.name,
                 bio: user.bio,
                 imageUrl: image.imageUrl,
-                imageId: image.imageId,
+                imageid: image.imageId,
             }
         );
 
